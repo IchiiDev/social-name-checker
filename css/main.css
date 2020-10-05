@@ -1,3 +1,15 @@
 body, .jumbotron {
     background-color: #2a2d32;
 }
+
+.dark {
+    background-color: #23272A;
+}
+
+.available {
+    color: #1fd62e
+}
+
+.unavailable {
+    color: #d13232
+}

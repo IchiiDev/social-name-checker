@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.custom.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/6e5392ed44.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -17,13 +18,31 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="https://github.com/IchiiDev/social-name-checker"><i
-                        class="fab fa-github"></i></a>
+                        class="fas fa-project-diagram"></i></a>
             </li>
         </ul>
         <span class="navbar-text">Realized by <a href="https://github.com/IchiiDev">IchiiDev</a></span>
     </nav>
-    <div class="jumbotron">
-        <div class="input-group form-group mb-3"><select class="form-control form-control-sm" id="board"></div>
+    <div class="jumbotron container">
+        <div class="row justify-content-md-center">
+            <div class="input-group form-group w-25">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" id="searchTerm" class="form-control" placeholder="Username"
+                    onClick="this.setSelectionRange(0, this.value.length)">
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <button class="btn btn-primary btn-lng text-lg-center" type="button" id="button-addon2"
+                onclick="checkUsername()"><i class="fas fa-search"></i> Search availability</button>
+        </div>
+    </div>
+    <div class="jumbotron dark container invisible" id="results">
+        <div class="jumbotron" id="twitter">
+            <i class="fas available fa-times-circle fa-3x"></i>
+        </div>
+        <div class="jumbotron" id="twitch">
+            <i class="fas unavailable fa-check-circle fa-3x"></i>
+        </div>
     </div>
 </body>
 
